@@ -22,4 +22,8 @@ end #ending method define
 =begin
   Compare the first 2 objects in the array, then, if 1 is larger than 2, swap em. Do this for the rest of the Array,
   until we get to the End. Then repeat it, with one less iteration on the elements.
+  
+  
+  Currently: Have it working perfectly for initial iteration, now must figure out a way to get it to work repeatedly
+  until sorted fully.
 =end
