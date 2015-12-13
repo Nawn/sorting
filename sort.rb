@@ -3,18 +3,15 @@ def bubble_sort (input_arr)
   temp_array = input_arr #Creating temp array to not affect the original.
   counter = 1
   
-  temp_array.each_with_index do |current_obj, index|
-    unless index == temp_array.size - counter  #If this isn't the last item we checked.
-      if temp_array[index] > temp_array[index+1] #Check to see if they're in the right order
-        temp_array[index], temp_array[index+1] = temp_array[index+1], temp_array[index] #If they're not, swap em
-      end #ending If
-    else
-      counter += 1 #make the counter go up, so in the unless statement, we don't keep checking finished indices
-      break #stop this iteration
-    end #ending unless
-  end #ending eachLoop
-  
-  puts counter
+  (length-1).times do
+    temp_array.each_with_index do |current_obj, index|
+      unless index == temp_array.size - counter  #If this isn't the last item we checked.
+        if temp_array[index] > temp_array[index+1] #Check to see if they're in the right order
+          temp_array[index], temp_array[index+1] = temp_array[index+1], temp_array[index] #If they're not, swap em
+        end #ending If
+      end #ending unless
+    end #ending eachLoop
+  end #ending times loop
   temp_array
 end #ending method define
 
